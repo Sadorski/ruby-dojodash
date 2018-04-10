@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<title>New</title>
+</head>
+<body>
+    <form class="form-control" action=/dojos method=post>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        Branch:<input type=text name=branch>
+        Street:<input type=text name=street>
+        City:<input type=text name=city>
+        State:<input type=text name=state>
+        <input class=btn-success type=submit name=submit value=Create>
+
+
+
+
+</body>
+</html>

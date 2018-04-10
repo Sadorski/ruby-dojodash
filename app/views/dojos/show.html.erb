@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<title>Show</title>
+</head>
+<body>
+    <h1><%=@dojo.brach%></h1>
+    <p>Address: <%=@dojo.street%></p>
+    <p>City: <%=@dojo.city%>  State: <%=@dojo.state%></p>
+    <a href="/dojos">Home</a> | <a href="/dojos/<%=@dojo.id%>/edit">Edit</a>
+
+</body>
+</html>

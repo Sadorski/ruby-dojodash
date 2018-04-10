@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<title>New Student</title>
+</head>
+<body>
+    <h1>New Student</h1>
+    <form action="/dojos/<%=@dojo.id%>/students/<%=@student.id%>" method=post>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="patch">
+    First Name: <input type=text name="first_name" value=<%=@student.first_name%>>
+    Last Name:  <input type=text name="last_name" value=<%=@student.last_name%>>
+    Email:      <input type=text name="email" value=<%=@student.email%>>
+    Dojo:       <select name="dojo" >
+                    <option value="1">Bellevue</option>
+                    <option value="2">San Jose</option>
+                    <option value="3">Burbank</option>
+                    <option value="4">Chicago</option>
+                </select>
+                <input type=submit name=submit value=update>
+    </form>
+    <a href=/dojos/>Home</a> | <a href="/dojos/<%=@dojo.id%>/students"><%=@dojo.city%></a>
+
+
+</body>
+</html>

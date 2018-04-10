@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
+</head>
+<body>
+    <h1> <%=@dojo.city%> Dojo</h1> <a href=#>Edit</a>
+    <p> Address: <%=@dojo.street%>
+    <p> City: <%=@dojo.city%> State: <%=@dojo.state%>
+    <h2> Student Roster </h2>
+    <table class=table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <% @students.each do |student| %>
+        <tr>
+            <td><%=student.first_name%></td>
+            <td><%=student.last_name%></td>
+            <td><%=student.email%></td>
+            <td><a href="/dojos/<%=@dojo.id%>/students/<%=student.id%>">Show | <a href="/dojos/<%=@dojo.id%>/students/<%=student.id%>/edit">Edit | <a href="/dojos/<%=@dojo.id%>/students/<%=student.id%>" data-method="delete">Destroy</a> </td>
+        </tr>
+        <% end %>
+    </table>
+    <a href="/dojos">Home </a>
+    <a href="/dojos/<%=@dojo.id%>/students/new">Add Student</a>
+
+</body>
+</html>

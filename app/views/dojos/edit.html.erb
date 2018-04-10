@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="style.css">
+<title>Edit</title>
+</head>
+<body>
+    <h1>Editing <%=@dojo.city%></h1>
+    <form action="/dojos/<%=@dojo.id%>/edit" method=post>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        Branch:<input type="text" name="branch" value="<%=@dojo.brach%>">
+        Street:<input type="text" name="street" value="<%=@dojo.street%>">
+        City:<input type="text" name="city" value="<%=@dojo.city%>">
+        State:<input type="text" name="state" value="<%=@dojo.state%>">
+        <input type=submit name=submit value=create>
+    </form>
+
+</body>
+</html>
